@@ -29,7 +29,7 @@ au BufNewFile,BufRead *.tex :colorscheme srtex
 set tabstop=4
 set expandtab
 set shiftwidth=4
-" set textwidth=79
+set textwidth=79
 
 " for vim to jump to the last position when reopening a file
 au BufNewFile,BufRead *.tex :set sw=1
@@ -37,7 +37,7 @@ au BufNewFile,BufRead *.tex :set sw=1
 
 " WINDOW
 set lines=50
-set columns=100
+set columns=90
 " this line ommits the toolbar
 set guioptions-=T
 
@@ -49,10 +49,3 @@ set foldlevel=9
 "Disable beep (bell). Set visual bell, which doesn;t work in MacVim anyway
 set vb
 
-"" Copy paste
-"" http://vim.wikia.com/wiki/Easy_pasting_to_Windows_applications
-if has("gui_running")
-  vmap <C-S-x> "+x
-  vmap <C-S-c> "+y
-  imap <C-S-v> <Esc>"+gp
-endif
