@@ -12,6 +12,9 @@ match ErrorMsg '\s\+$'
 set colorcolumn=80
 highlight ColorColumn guibg=blue
 
+" soft text wrap, visually but no new lines created
+set wrap
+set linebreak
 
 " Disable backup and swap files
 set nobackup
