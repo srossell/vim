@@ -21,6 +21,12 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+" Highlight searched strings
+set hlsearch
+
+" allow changin buffers without saving
+set hidden
+
 
 set bg=dark
 set noantialias
