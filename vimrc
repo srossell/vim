@@ -30,7 +30,7 @@ set hidden
 
 set bg=dark
 set noantialias
-set guifont=Courier:h10
+set guifont=Courier:h18
 colorscheme srpy
 au BufNewFile,BufRead *.py :colorscheme srpy
 au BufNewFile,BufRead *.tex :colorscheme srtex
@@ -58,3 +58,35 @@ set foldlevel=9
 "Disable beep (bell). Set visual bell, which doesn;t work in MacVim anyway
 set vb
 
+
+
+" http://coderoncode.com/tools/2017/04/16/vim-the-perfect-ide.html
+" Syntastic Configuration
+" requires flake8. i.e. pip install flake8
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_enable_elixir_checker = 1
+" let g:syntastic_elixir_checkers = ["elixir"]
+" use flake8 only (not pylint)
+let g:syntastic_python_checkers = ['flake8']
+" igonre warning empty line at the end of the file
+let g:syntastic_python_flake8_args='--ignore=W391'
+
+" Show linenumbers
+set number
+set ruler
+
+" Set Proper Tabs
+set tabstop=4
+set shiftwidth=4
+set smarttab
+set expandtab
+
+" Always display the status line
+set laststatus=2
