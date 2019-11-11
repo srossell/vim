@@ -19,7 +19,9 @@ au BufNewFile,BufRead *.py :colorscheme srpy
 au BufNewFile,BufRead *.tex :colorscheme srtex
 " from Martin Brochhaus https://github.com/mbrochh
 set colorcolumn=81
-highlight ColorColumn guibg=blue
+highlight ColorColumn ctermbg=240
+" highlight closing parentheses
+set showmatch
 
 
 "FEEL
